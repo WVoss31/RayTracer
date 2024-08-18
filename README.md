@@ -1,18 +1,23 @@
-# Walnut
+# RayTracer
 
-Walnut is a simple application framework built with Dear ImGui and designed to be used with Vulkan - basically this means you can seemlessly blend real-time Vulkan rendering with a great UI library to build desktop applications. The plan is to expand Walnut to include common utilities to make immediate-mode desktop apps and simple Vulkan applications.
+This Ray Tracer is created following TheCherno's Ray Tracing Series, using his custom GUI framework called Walnut.
+I have edited this framework to work for Linux using CMake instead of premake like in the tutorial.
 
-Currently supports Windows - with macOS and Linux support planned. Setup scripts support Visual Studio 2022 by default.
-
-![WalnutExample](https://hazelengine.com/images/ForestLauncherScreenshot.jpg)
 _<center>Forest Launcher - an application made with Walnut</center>_
 
 ## Requirements
-- [Visual Studio 2022](https://visualstudio.com) (not strictly required, however included setup scripts only support this)
+- A Valid C++ IDE, I got it working with Visual Studio Code and CLion.
 - [Vulkan SDK](https://vulkan.lunarg.com/sdk/home#windows) (preferably a recent version)
+- CMake
+- C++ Compiler
+- If using VSCode, make sure you have the CMake Extension installed
 
 ## Getting Started
-Once you've cloned, run `scripts/Setup.bat` to generate Visual Studio 2022 solution/project files. Once you've opened the solution, you can run the WalnutApp project to see a basic example (code in `WalnutApp.cpp`). I recommend modifying that WalnutApp project to create your own application, as everything should be setup and ready to go.
+In CLion, it should prompt you to create a CMake Profile, click the Plus To add 2 extra profiles. These should be the "Release" and "RelwithDebInfo". 
+These are already configured. I recommend you run in "Release" mode for best results.
+
+In VSCode, you should also get a prompt with the cmake extension.
+This should also auto complete, make sure the build mode is on "Release" and click the play icon near the "Launch" tag in the cmake extension page.
 
 ### 3rd party libaries
 - [Dear ImGui](https://github.com/ocornut/imgui)
