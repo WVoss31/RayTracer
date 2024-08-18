@@ -18,6 +18,7 @@ private:
     const Scene* m_ActiveScene = nullptr;
     const Camera* m_ActiveCamera = nullptr;
     glm::vec4* m_AccumulationData = nullptr;
+    std::vector<uint16_t> m_ImageHorizontalIter, m_ImageVerticalIter;
 
     struct HitPayload
     {
@@ -31,11 +32,11 @@ private:
     glm::vec4 PerPixel(uint32_t x, uint32_t y); //RayGen Shader
 
     HitPayload TraceRay(const Ray& ray);
-    HitPayload ClosestHit(const Ray& ray, float hitDistance, int objectIndex);
+    HitPayload ClosestHit(const Ray& ray, float hitDistance, int objectIndex) const;
+
     HitPayload Miss(const Ray& ray);
 public:
     Renderer() = default;
-    ~Renderer() = default;
 
     struct Settings
     {
