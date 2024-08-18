@@ -3,7 +3,6 @@
 This Ray Tracer is created following TheCherno's Ray Tracing Series, using his custom GUI framework called Walnut.
 I have edited this framework to work for Linux using CMake instead of premake like in the tutorial.
 
-_<center>Forest Launcher - an application made with Walnut</center>_
 
 ## Requirements
 - A Valid C++ IDE, I got it working with Visual Studio Code and CLion.
